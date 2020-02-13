@@ -165,6 +165,7 @@ polygon = PoolVector2Array( 3.03237, -26.9861, -3.35342, -26.9861, -6.545, -23.9
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 0.8, 0.8 )
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
