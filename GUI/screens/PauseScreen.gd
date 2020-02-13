@@ -24,7 +24,7 @@ func _on_QuitMenu_pressed() -> void:
 	visible = false
 
 	# Go back to the main menu
-	get_tree().change_scene("res://assets/GUI/screens/TitleScreen.tscn")
+	get_tree().change_scene("res://GUI/screens/TitleScreen.tscn")
 
 func _on_QuitDesktop_pressed() -> void:
 	get_tree().quit()

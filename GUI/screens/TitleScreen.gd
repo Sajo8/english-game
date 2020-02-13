@@ -13,5 +13,6 @@ func _on_Play_pressed() -> void:
 
 	get_tree().change_scene("res://levels/level1/Level1.tscn")
 
-func _on_QuitDesktop_pressed() -> void:
-	get_tree().quit()
+func _on_Kahoot_pressed() -> void:
+	OS.shell_open("https://kahoot.com")
+
