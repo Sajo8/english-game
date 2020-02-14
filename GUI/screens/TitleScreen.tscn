@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GUI/screens/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://GUI/screens/title_background.png" type="Texture" id=2]
-[ext_resource path="res://assets/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
-[ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=4]
-[ext_resource path="res://assets/themes/DarkLabelMidBig.tres" type="Theme" id=6]
+[ext_resource path="res://GUI/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
+[ext_resource path="res://GUI/themes/BlueButton.tres" type="Theme" id=4]
+[ext_resource path="res://words/Word1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GUI/themes/DarkLabelMidBig.tres" type="Theme" id=6]
 [ext_resource path="res://assets/fonts/Font50.tres" type="DynamicFont" id=7]
 
 [sub_resource type="Animation" id=1]
@@ -69,6 +70,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene = ExtResource( 5 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0

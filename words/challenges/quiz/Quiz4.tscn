@@ -1,18 +1,20 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://levels/challenges/quiz/Quiz.gd" type="Script" id=1]
+[ext_resource path="res://words/challenges/quiz/Quiz.gd" type="Script" id=1]
 [ext_resource path="res://assets/parallaxBGs/ParallaxBGRed.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/themes/WhiteLabelBig.tres" type="Theme" id=6]
-[ext_resource path="res://assets/themes/WhiteLabelMid.tres" type="Theme" id=7]
-[ext_resource path="res://assets/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
+[ext_resource path="res://GUI/themes/WhiteLabelBig.tres" type="Theme" id=6]
+[ext_resource path="res://GUI/themes/WhiteLabelMid.tres" type="Theme" id=7]
+[ext_resource path="res://GUI/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=10]
 
 
-[node name="Quiz2" type="Control"]
+
+
+[node name="Quiz4" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
@@ -37,13 +39,13 @@ tile_data = PoolIntArray( 65535, 0, 0, 30, 0, 0, 131071, 0, 0, 65566, 0, 0, 1966
 [node name="RedPortal" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 235.349, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://levels/challenges/quiz/YouLostQuiz.tscn"
+scene_path = "res://levels/challenges/quiz/Quiz5.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal2" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 692.134, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://levels/challenges/quiz/Quiz3.tscn"
+scene_path = "res://levels/challenges/quiz/YouLostQuiz.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal3" parent="Portals" instance=ExtResource( 5 )]
@@ -80,7 +82,7 @@ margin_top = 121.0
 margin_right = 1023.0
 margin_bottom = 156.0
 theme = ExtResource( 7 )
-text = "Round 2"
+text = "Round 4"
 
 [node name="Instructions" type="Label" parent="Labels"]
 anchor_right = 1.0
@@ -95,12 +97,12 @@ text = "Go through the portal with the brand that corresponds to the slogan:"
 [node name="Slogan" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 753.0
+margin_left = 783.0
 margin_top = 373.0
-margin_right = 1166.0
+margin_right = 1117.0
 margin_bottom = 419.0
 theme = ExtResource( 8 )
-text = "\"Snap, crackle, pop\""
+text = "\"Let's Go Places\""
 
 [node name="Option1" type="Label" parent="Labels"]
 anchor_right = 1.0
@@ -110,38 +112,37 @@ margin_top = 525.0
 margin_right = 284.0
 margin_bottom = 560.0
 theme = ExtResource( 7 )
-text = "M&Ms"
+text = "Toyota"
 
 [node name="Option2" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 599.0
+margin_left = 643.0
 margin_top = 525.0
-margin_right = 798.0
+margin_right = 722.0
 margin_bottom = 560.0
 theme = ExtResource( 7 )
-text = "Rice Krispies"
+text = "BMW"
 
 [node name="Option3" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1064.0
+margin_left = 1101.0
 margin_top = 525.0
-margin_right = 1229.0
+margin_right = 1209.0
 margin_bottom = 560.0
 theme = ExtResource( 7 )
-text = "Coca-Cola"
+text = "Adidas"
 
 [node name="Option4" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1457.0
+margin_left = 1534.0
 margin_top = 525.0
-margin_right = 1743.0
-margin_bottom = 598.0
+margin_right = 1641.0
+margin_bottom = 560.0
 theme = ExtResource( 7 )
-text = "Lay's Potato Chips
-"
+text = "Honda"
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 108.059, 905.977 )
