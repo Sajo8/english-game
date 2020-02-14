@@ -3,7 +3,7 @@ extends Area2D
 onready var anim_player := $AnimationPlayer
 
 # String for the scene to load when entering portal
-export var scene_path : String
+export var scene : PackedScene
 # Bool in order to toggle whether or not the player should teleport whatsoever.
 export var enable_teleport : bool = true
 
@@ -36,7 +36,7 @@ func teleport():
 
 	# Load the path set by us when making the scene (viewable on the right side of the screen)
 	# Interesting to note: we cannot load PackedScene objects, because those are essentially the same as pre-loading a string. That is fine, but if we do that for both the Blue and Red portals, it won't work. That's because the Level1 has the Blue portal, which loads (and has a dependency on) SubLevel1, which has the Red portal, which in turn loads (and has a dependency) on Level1. You cannot have cylic dependencies, so we have to specify a string which is loaded in dynamically upon playtime.
-	get_tree().change_scene_to(load(scene_path))
+	get_tree().change_scene_to(load(scene.get_path()))
 
 func _on_BluePortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
