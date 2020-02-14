@@ -40,7 +40,7 @@ func teleport():
 
 	# Load the scene to change to
 	# See BluePortal.gd for a comment on why we load a String to the scene instead of asking for a PackedScene object through the inspector
-	get_tree().change_scene_to(load(scene.get_path()))
+	get_tree().change_scene(scene.get_path())
 
 func _on_RedPortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":

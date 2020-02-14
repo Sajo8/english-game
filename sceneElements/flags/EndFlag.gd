@@ -1,5 +1,7 @@
 extends Area2D
 
+export var scene : PackedScene
+
 func _on_EndFlag_body_entered(body: PhysicsBody2D) -> void:
 	# Once the player reaches the green flag
 	if body.name == "Player":
@@ -8,4 +10,4 @@ func _on_EndFlag_body_entered(body: PhysicsBody2D) -> void:
 		# Switch to the "You Won!" screen
 		$AnimationPlayer.play("fade_in")
 		yield($AnimationPlayer, "animation_finished")
-		get_tree().change_scene("res://GUI/screens/LevelPassedScreen.tscn")
+		get_tree().change_scene(scene.get_path())

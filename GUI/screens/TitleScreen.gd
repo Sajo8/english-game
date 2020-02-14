@@ -1,6 +1,6 @@
 extends Control
 
-export var scene : PackedScene = load("res://words/Word1.tscn")
+export var scene: PackedScene
 
 func _ready() -> void:
 	# Maximise window
@@ -15,8 +15,8 @@ func _on_Play_pressed() -> void:
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")
 
-	get_tree().change_scene_to(scene)
+	get_tree().change_scene(scene.get_path())
+
 
 func _on_Kahoot_pressed() -> void:
 	OS.shell_open("https://kahoot.com")
-

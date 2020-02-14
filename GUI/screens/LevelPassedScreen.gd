@@ -1,5 +1,7 @@
 extends Control
 
+export var scene: PackedScene
+
 func _ready() -> void:
 	# Focus on the Quit button on start
 	$VBoxContainer/QuitMenu.grab_focus()
@@ -9,4 +11,4 @@ func _on_QuitMenu_pressed() -> void:
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")
 
-	get_tree().change_scene("res://GUI/screens/TitleScreen.tscn")
+	get_tree().change_scene(scene.get_path())
