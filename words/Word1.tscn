@@ -116,13 +116,11 @@ position = Vector2( 3696.97, 436.231 )
 [node name="memz" type="Node2D" parent="."]
 
 [node name="Meme" parent="memz" instance=ExtResource( 2 )]
-modulate = Color( 1, 1, 1, 1 )
 position = Vector2( 3995.06, 192.206 )
 scale = Vector2( 1.02418, 1.02418 )
 texture = ExtResource( 4 )
 
 [node name="Meme2" parent="memz" instance=ExtResource( 2 )]
-modulate = Color( 1, 1, 1, 1 )
 position = Vector2( 4508.85, 518.801 )
 scale = Vector2( 0.98912, 0.98912 )
 texture = ExtResource( 5 )
@@ -137,4 +135,3 @@ camera_limit_right = 4950
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 13 )]
-visible = false

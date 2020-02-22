@@ -1,5 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
+[ext_resource path="res://items/Meme.tscn" type="PackedScene" id=1]
+[ext_resource path="res://memes/tragedy1.jpg" type="Texture" id=2]
+[ext_resource path="res://memes/tragedy2.jpg" type="Texture" id=3]
+[ext_resource path="res://words/Word4.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/tilesets/blue.tres" type="TileSet" id=7]
 [ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=8]
@@ -9,7 +13,7 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://items/WordLabel.tscn" type="PackedScene" id=14]
 
-[node name="Word2" type="Node2D"]
+[node name="Word3" type="Node2D"]
 
 [node name="bgtiles" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
@@ -29,6 +33,7 @@ __meta__ = {
 [node name="BluePortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 5600.94, 443.067 )
 scale = Vector2( 0.35, 0.35 )
+scene = ExtResource( 4 )
 
 [node name="Labels" type="Node2D" parent="."]
 
@@ -76,7 +81,20 @@ text = "Pop culture:
 
 Titanic (1997) is a modern example of a tragedy, with Jack, one of the protagonists, ultimately dying."
 
+[node name="memz" type="Node2D" parent="."]
+
+[node name="Meme" parent="memz" instance=ExtResource( 1 )]
+position = Vector2( 5258.26, 135.232 )
+scale = Vector2( 0.838731, 0.838731 )
+texture = ExtResource( 2 )
+
+[node name="Meme2" parent="memz" instance=ExtResource( 1 )]
+position = Vector2( 5534.5, 149.965 )
+scale = Vector2( 0.838731, 0.838731 )
+texture = ExtResource( 3 )
+
 [node name="Areas" type="Node2D" parent="."]
+visible = false
 
 [node name="Area1" parent="Areas" instance=ExtResource( 12 )]
 position = Vector2( 390.794, 366.267 )
@@ -102,4 +120,3 @@ camera_limit_right = 5730
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 13 )]
-visible = false
