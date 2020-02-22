@@ -1,9 +1,15 @@
 extends Actor
 
+export var camera_limit_right := 1000
+
 # var used in double jump code
 var _times_jumped := 0
 # var to keep track of current animation to be played
 var _anim := ""
+
+func _ready() -> void:
+	$Camera2D.limit_right = camera_limit_right
+	Globals.add_powerup("double_jump")
 
 func _physics_process(delta: float) -> void:
 	# If we let go of the jump button mid-jump
