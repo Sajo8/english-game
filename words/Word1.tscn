@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GUI/themes/DarkLabelBig.tres" type="Theme" id=1]
-[ext_resource path="res://GUI/themes/DarkLabelMid.tres" type="Theme" id=2]
+[ext_resource path="res://items/Meme.tscn" type="PackedScene" id=2]
 [ext_resource path="res://words/Word1.gd" type="Script" id=3]
 [ext_resource path="res://memes/theme1.jpg" type="Texture" id=4]
 [ext_resource path="res://memes/theme2.jpg" type="Texture" id=5]
@@ -11,7 +11,9 @@
 [ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=9]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://words/Word2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://items/WordArea.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://items/WordLabel.tscn" type="PackedScene" id=14]
 
 [node name="Word1" type="Node2D"]
 script = ExtResource( 3 )
@@ -52,97 +54,79 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Theme" type="Label" parent="Labels"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1101.21
-margin_top = 291.947
+[node name="Label1" parent="Labels" instance=ExtResource( 14 )]
 margin_right = 1250.21
-margin_bottom = 361.947
-theme = ExtResource( 2 )
+margin_bottom = 641.947
 text = "Word 166:
 Theme"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Def" type="Label" parent="Labels"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Label2" parent="Labels" instance=ExtResource( 14 )]
 margin_left = 1555.8
 margin_top = 318.728
 margin_right = 2109.8
 margin_bottom = 528.728
-theme = ExtResource( 2 )
 text = "Defintion:
 
 The main subject or idea of a piece of literature; the main lesson that the author wants to teach the reader"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Ex2" type="Label" parent="Labels"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Label3" parent="Labels" instance=ExtResource( 14 )]
 margin_left = 2241.78
 margin_top = 414.879
 margin_right = 2810.78
-margin_bottom = 589.879
-theme = ExtResource( 2 )
+margin_bottom = 624.879
 text = "Example sentence:
 
 \"Some themes of Chronicle of a Death Foretold include honor and machismo\""
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Ex3" type="Label" parent="Labels"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Label4" parent="Labels" instance=ExtResource( 14 )]
 margin_left = 2945.0
 margin_top = 286.0
 margin_right = 3512.0
 margin_bottom = 566.0
-theme = ExtResource( 2 )
 text = "Literary Example:
 
 \"'We killed him openly,' Pedro Vicario said, 'but we’re innocent'\"
 
 In this example, Pedro says that yes, he killed a person, but that it was ok since it was an honor killing"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Ex4" type="Label" parent="Labels"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Label5" parent="Labels" instance=ExtResource( 14 )]
 margin_left = 4166.65
 margin_top = 153.919
 margin_right = 4739.65
-margin_bottom = 363.919
-theme = ExtResource( 2 )
+margin_bottom = 433.919
 text = "Pop culture: 
 
 The theme of good and evil in Harry Potter, and how they sometimes aren't always clear, such as with Snape"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="Area1" parent="Areas" instance=ExtResource( 12 )]
+position = Vector2( 934.785, 482.302 )
+
+[node name="Area2" parent="Areas" instance=ExtResource( 12 )]
+position = Vector2( 1459.4, 432.009 )
+
+[node name="Area3" parent="Areas" instance=ExtResource( 12 )]
+position = Vector2( 2167.09, 546.913 )
+
+[node name="Area4" parent="Areas" instance=ExtResource( 12 )]
+position = Vector2( 2860.34, 423.928 )
+
+[node name="Area5" parent="Areas" instance=ExtResource( 12 )]
+position = Vector2( 3696.97, 436.231 )
 
 [node name="ParallaxBG" parent="." instance=ExtResource( 9 )]
 
 [node name="memz" type="Node2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="memz"]
+[node name="Meme" parent="memz" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
 position = Vector2( 3995.06, 192.206 )
 scale = Vector2( 1.02418, 1.02418 )
 texture = ExtResource( 4 )
 
-[node name="Sprite2" type="Sprite" parent="memz"]
+[node name="Meme2" parent="memz" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
 position = Vector2( 4508.85, 518.801 )
 scale = Vector2( 0.98912, 0.98912 )
 texture = ExtResource( 5 )
@@ -153,3 +137,4 @@ position = Vector2( 480.392, 630.625 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 13 )]
+visible = false
