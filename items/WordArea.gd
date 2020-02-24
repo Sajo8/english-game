@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 func _on_WordArea_body_entered(body: Node) -> void:
 	if body.name != "Player":
@@ -17,4 +17,3 @@ func _on_WordArea_body_entered(body: Node) -> void:
 		if name[-1] == last_number:
 			for meme in memes:
 				meme.fade()
-
