@@ -9,4 +9,3 @@ func _on_VideoArea_body_entered(body: Node) -> void:
 		var video = videos[0]
 		video.fade()
 		video.play()
-		yield(video, "finished")
