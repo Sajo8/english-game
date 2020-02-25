@@ -53,7 +53,7 @@ margin_right = 1491.96
 margin_bottom = 306.366
 text = "Defintion:
 
-A movement that emphasises morality, truth, intuition, and conscience. It also urges humans to follow their feelings and be guided by their conscience rather than by religion or social norms. "
+A movement that emphasizes morality, truth, intuition, and conscience. It also urges humans to follow their feelings and be guided by their conscience rather than by religion or social norms. "
 dark = false
 
 [node name="Label3" parent="Labels" instance=ExtResource( 14 )]
